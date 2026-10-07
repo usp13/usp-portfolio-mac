@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { X, Minus, Maximize2 } from "lucide-react";
 
 interface WindowProps {
@@ -35,7 +35,7 @@ export default function Window({
   const windowRef = useRef<HTMLDivElement>(null);
   const isPosInitialized = useRef(false);
 
-  const updateDeviceType = () => {
+  const updateDeviceType = useCallback(() => {
     const width = window.innerWidth;
     const height = window.innerHeight;
     setIsMobile(width <= 768);
@@ -66,14 +66,14 @@ export default function Window({
       }
     }
     isPosInitialized.current = true;
-  };
+  }, [cascadeIndex]);
 
   useEffect(() => {
     updateDeviceType();
     const handleResize = () => updateDeviceType();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [updateDeviceType]);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {

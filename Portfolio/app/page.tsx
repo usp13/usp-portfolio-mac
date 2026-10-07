@@ -24,7 +24,7 @@ export default function Home() {
   const [openWindows, setOpenWindows] = useState<string[]>([]);
   const [activeWindow, setActiveWindow] = useState<string | null>(null);
   const [windowZIndices, setWindowZIndices] = useState<Record<string, number>>({});
-  const [highestZ, setHighestZ] = useState<number>(30);
+  const [, setHighestZ] = useState<number>(30);
   const [windowCascadeIndex, setWindowCascadeIndex] = useState<Record<string, number>>({});
   const nextCascadeSlot = useRef<number>(0);
   const [wallpaper1, setWallpaper] = useState<string>(wallpaper.src);

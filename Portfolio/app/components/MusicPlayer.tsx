@@ -26,9 +26,34 @@ import {
   Clock,
 } from "lucide-react";
 
+interface YouTubePlayerInstance {
+  playVideo: () => void;
+  pauseVideo: () => void;
+  stopVideo: () => void;
+  seekTo: (seconds: number, allowSeekAhead?: boolean) => void;
+  setVolume: (volume: number) => void;
+  destroy: () => void;
+  getCurrentTime: () => number;
+  getDuration: () => number;
+  loadVideoById?: (options: { videoId: string; startSeconds?: number } | string) => void;
+  cueVideoById?: (options: { videoId: string; startSeconds?: number } | string) => void;
+  mute?: () => void;
+  unMute?: () => void;
+}
+
+interface YTEvent {
+  target: YouTubePlayerInstance;
+  data: number;
+}
+
+interface YouTubeNamespace {
+  Player: new (elementId: string | HTMLElement, options: Record<string, unknown>) => YouTubePlayerInstance;
+  PlayerState: Record<string, number>;
+}
+
 declare global {
   interface Window {
-    YT: any;
+    YT: YouTubeNamespace;
     onYouTubeIframeAPIReady: () => void;
   }
 }
@@ -97,7 +122,7 @@ export default function RealSpotifyPlayer() {
   const [likedTrackIds, setLikedTrackIds] = useState<Set<string>>(new Set());
 
   // Player references
-  const ytPlayerRef = useRef<any>(null);
+  const ytPlayerRef = useRef<YouTubePlayerInstance | null>(null);
   const isYtReady = useRef<boolean>(false);
   const searchTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -128,6 +153,7 @@ export default function RealSpotifyPlayer() {
     }
     setCurrentTrackIndex(nextIdx);
     playTrack(playlist[nextIdx], playlist, nextIdx);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [playlist, currentTrackIndex, isShuffled]);
 
   const handlePrev = () => {
@@ -162,13 +188,13 @@ export default function RealSpotifyPlayer() {
             playsinline: 1,
           },
           events: {
-            onReady: (event: any) => {
+            onReady: (event: YTEvent) => {
               isYtReady.current = true;
               event.target.setVolume(Math.round(volume * 100));
               const d = event.target.getDuration();
               if (d && d > 60) setDuration(d);
             },
-            onStateChange: (event: any) => {
+            onStateChange: (event: YTEvent) => {
               // 1: PLAYING, 2: PAUSED, 0: ENDED, 3: BUFFERING
               if (event.data === 1) {
                 setIsPlaying(true);
@@ -426,10 +452,10 @@ export default function RealSpotifyPlayer() {
     if (ytPlayerRef.current && isYtReady.current) {
       try {
         if (isMuted) {
-          ytPlayerRef.current.mute();
+          ytPlayerRef.current?.mute?.();
         } else {
-          ytPlayerRef.current.unMute();
-          ytPlayerRef.current.setVolume(volPercent);
+          ytPlayerRef.current?.unMute?.();
+          ytPlayerRef.current?.setVolume(volPercent);
         }
       } catch {}
     }

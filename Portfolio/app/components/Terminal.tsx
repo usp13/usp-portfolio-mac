@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { useTheme } from "../contexts/ThemeContext";
-import { philosophicalQuotes, getRandomPhilosophicalQuote } from "../data/quotes";
+import { getRandomPhilosophicalQuote } from "../data/quotes";
 
 interface CommandItem {
   cmd: string;
@@ -33,13 +33,7 @@ const COMMAND_LIST: CommandItem[] = [
   { cmd: "sudo", desc: "Try running a command as superuser" },
 ];
 
-const quotes = [
-  "\"Programs must be written for people to read, and only incidentally for machines to execute.\" — Harold Abelson",
-  "\"Simplicity is prerequisite for reliability.\" — Edsger W. Dijkstra",
-  "\"Talk is cheap. Show me the code.\" — Linus Torvalds",
-  "\"Make it work, make it right, make it fast.\" — Kent Beck",
-  "\"The function of good software is to make the complex appear to be simple.\" — Grady Booch",
-];
+
 
 const fileSystem: Record<string, string> = {
   "bio.txt": "Utsav Shailesh Panchal\nFull-Stack Developer & AI Systems Engineer based in India.\nSpecializing in high-performance web applications, LLM agent architectures, and RAG pipelines.",
@@ -288,7 +282,7 @@ You can view or download the complete interactive resume by clicking the "Resume
           const q = getRandomPhilosophicalQuote();
           response = (
             <div className="space-y-1 my-1">
-              <p className="text-gray-100 italic">"{q.quote}"</p>
+              <p className="text-gray-100 italic">&ldquo;{q.quote}&rdquo;</p>
               <p className="text-apple-blue font-semibold text-xs">
                 — {q.author} <span className="text-gray-400 font-normal">({q.source} • {q.school})</span>
               </p>

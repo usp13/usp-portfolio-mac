@@ -21,7 +21,6 @@ import {
   Volume2,
   VolumeX,
   Volume1,
-  Power,
   RotateCcw,
   Lock,
   Play,
@@ -38,10 +37,7 @@ import {
   Briefcase,
   FolderGit2,
   Mail,
-  HelpCircle,
   Command,
-  ExternalLink,
-  Shield,
   Zap,
 } from "lucide-react";
 import { useTheme } from "../contexts/ThemeContext";
@@ -64,7 +60,7 @@ interface MenuBarProps {
   bringToFront?: (id: string) => void;
 }
 
-const APP_META: Record<string, { name: string; icon: any }> = {
+const APP_META: Record<string, { name: string; icon: React.ComponentType<{ className?: string }> }> = {
   about: { name: "About Me", icon: User },
   "work-experience": { name: "Experience", icon: Briefcase },
   projects: { name: "Projects", icon: FolderGit2 },
@@ -115,7 +111,6 @@ const MenuBar: React.FC<MenuBarProps> = ({
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
   const [isWallpaperSelectorOpen, setIsWallpaperSelectorOpen] = useState(false);
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isLocked, setIsLocked] = useState(false);
   const [isRestartModalOpen, setIsRestartModalOpen] = useState(false);
   const [isShortcutsModalOpen, setIsShortcutsModalOpen] = useState(false);
