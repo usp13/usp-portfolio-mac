@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sf: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-sf);
+  @apply bg-white dark:bg-black text-apple-ink dark:text-white transition-colors duration-300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Responsive base styles */
+@layer base {
+  html {
+    @apply text-[15px] sm:text-[17px];
+    line-height: 1.47;
+    letter-spacing: -0.015em;
+  }
+  
+  body {
+    @apply overflow-hidden select-none;
+  }
+
+  h1, h2, h3, h4 {
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Apple Button Micro-Interactions */
+.apple-press {
+  transition: transform 0.12s cubic-bezier(0.2, 0, 0, 1), opacity 0.12s ease;
+}
+
+.apple-press:active {
+  transform: scale(0.95);
+}
+
+/* Frosted glass */
+.apple-glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(25px) saturate(190%);
+  -webkit-backdrop-filter: blur(25px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.dark .apple-glass {
+  background: rgba(30, 30, 32, 0.72);
+  backdrop-filter: blur(25px) saturate(190%);
+  -webkit-backdrop-filter: blur(25px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Apple Menu Bar Frosted Glass */
+.apple-menubar {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(30px) saturate(200%);
+  -webkit-backdrop-filter: blur(30px) saturate(200%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.dark .apple-menubar {
+  background: rgba(22, 22, 24, 0.72);
+  backdrop-filter: blur(30px) saturate(200%);
+  -webkit-backdrop-filter: blur(30px) saturate(200%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Apple Window Traffic Light Controls */
+.apple-traffic-light {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.15s ease;
+  border: 0.5px solid rgba(0, 0, 0, 0.15);
+}
+
+.apple-traffic-light svg {
+  opacity: 0;
+  transition: opacity 0.1s ease;
+}
+
+.apple-traffic-lights:hover .apple-traffic-light svg {
+  opacity: 1;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+@media (min-width: 640px) {
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive utilities */
+@layer utilities {
+  .safe-area {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* macOS Dock & Window Animations */
+@keyframes dockBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-24px) scale(1.12);
+  }
+  40% {
+    transform: translateY(0) scale(0.96);
+  }
+  60% {
+    transform: translateY(-12px) scale(1.05);
+  }
+  80% {
+    transform: translateY(0) scale(0.98);
+  }
+}
+
+.animate-dock-bounce {
+  animation: dockBounce 0.85s cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+
+@keyframes windowOpen {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-window-open {
+  animation: windowOpen 0.26s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes windowClose {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.92) translateY(18px);
+  }
+}
+
+.animate-window-close {
+  animation: windowClose 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
+}
+
+@keyframes iconPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.88);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-icon-pulse {
+  animation: iconPulse 0.3s ease-out;
+}
+
+/* Authentic Apple Menu Dropdown Animations */
+@keyframes menuDropdown {
+  0% {
+    opacity: 0;
+    transform: scale(0.97) translateY(-4px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-menu-dropdown {
+  animation: menuDropdown 0.14s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: top left;
+}
+
+.animate-menu-dropdown-right {
+  animation: menuDropdown 0.14s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: top right;
+}
+
+@keyframes spotlightAnim {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(-12px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-spotlight {
+  animation: spotlightAnim 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.94) translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-modal-scale-in {
+  animation: modalScaleIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+

@@ -1,0 +1,748 @@
+export interface PhilosophicalQuote {
+  id: number;
+  quote: string;
+  author: string;
+  source: string;
+  school: "Stoicism" | "Classical Philosophy" | "Political Realism" | "Eastern Philosophy" | "Existentialism";
+}
+
+export const philosophicalQuotes: PhilosophicalQuote[] = [
+  // --- Marcus Aurelius (Stoicism) ---
+  {
+    id: 1,
+    quote: "You have power over your mind - not outside events. Realize this, and you will find strength.",
+    author: "Marcus Aurelius",
+    source: "Meditations",
+    school: "Stoicism",
+  },
+  {
+    id: 2,
+    quote: "The happiness of your life depends upon the quality of your thoughts.",
+    author: "Marcus Aurelius",
+    source: "Meditations",
+    school: "Stoicism",
+  },
+  {
+    id: 3,
+    quote: "Waste no more time arguing what a good man should be. Be one.",
+    author: "Marcus Aurelius",
+    source: "Meditations",
+    school: "Stoicism",
+  },
+  {
+    id: 4,
+    quote: "The impediment to action advances action. What stands in the way becomes the way.",
+    author: "Marcus Aurelius",
+    source: "Meditations",
+    school: "Stoicism",
+  },
+  {
+    id: 5,
+    quote: "When you arise in the morning think of what a privilege it is to be alive, to think, to enjoy, to love.",
+    author: "Marcus Aurelius",
+    source: "Meditations",
+    school: "Stoicism",
+  },
+  {
+    id: 6,
+    quote: "It never ceases to amaze me: we all love ourselves more than other people, but care more about their opinion than our own.",
+    author: "Marcus Aurelius",
+    source: "Meditations",
+    school: "Stoicism",
+  },
+  {
+    id: 7,
+    quote: "If it is not right do not do it; if it is not true do not say it.",
+    author: "Marcus Aurelius",
+    source: "Meditations",
+    school: "Stoicism",
+  },
+  {
+    id: 8,
+    quote: "The soul becomes dyed with the color of its thoughts.",
+    author: "Marcus Aurelius",
+    source: "Meditations",
+    school: "Stoicism",
+  },
+  {
+    id: 9,
+    quote: "Very little is needed to make a happy life; it is all within yourself, in your way of thinking.",
+    author: "Marcus Aurelius",
+    source: "Meditations",
+    school: "Stoicism",
+  },
+  {
+    id: 10,
+    quote: "Choose not to be harmed—and you won't feel harmed. Don't feel harmed—and you haven't been.",
+    author: "Marcus Aurelius",
+    source: "Meditations",
+    school: "Stoicism",
+  },
+  {
+    id: 11,
+    quote: "Accept the things to which fate binds you, and love the people with whom fate brings you together, but do so with all your heart.",
+    author: "Marcus Aurelius",
+    source: "Meditations",
+    school: "Stoicism",
+  },
+  {
+    id: 12,
+    quote: "Dwell on the beauty of life. Watch the stars, and see yourself running with them.",
+    author: "Marcus Aurelius",
+    source: "Meditations",
+    school: "Stoicism",
+  },
+  {
+    id: 13,
+    quote: "Never let the future disturb you. You will meet it, if you have to, with the same weapons of reason which today arm you against the present.",
+    author: "Marcus Aurelius",
+    source: "Meditations",
+    school: "Stoicism",
+  },
+  {
+    id: 14,
+    quote: "The best revenge is to be unlike him who performed the injury.",
+    author: "Marcus Aurelius",
+    source: "Meditations",
+    school: "Stoicism",
+  },
+  {
+    id: 15,
+    quote: "External things are not the problem. It's your assessment of them. Which you can erase right now.",
+    author: "Marcus Aurelius",
+    source: "Meditations",
+    school: "Stoicism",
+  },
+  {
+    id: 16,
+    quote: "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.",
+    author: "Marcus Aurelius",
+    source: "Meditations",
+    school: "Stoicism",
+  },
+  {
+    id: 17,
+    quote: "Do every act of your life as though it were the very last act of your life.",
+    author: "Marcus Aurelius",
+    source: "Meditations",
+    school: "Stoicism",
+  },
+  {
+    id: 18,
+    quote: "Confine yourself to the present.",
+    author: "Marcus Aurelius",
+    source: "Meditations",
+    school: "Stoicism",
+  },
+  {
+    id: 19,
+    quote: "Loss is nothing else but change, and change is Nature's delight.",
+    author: "Marcus Aurelius",
+    source: "Meditations",
+    school: "Stoicism",
+  },
+  {
+    id: 20,
+    quote: "Because a thing seems difficult for you, do not think it impossible for anyone to accomplish.",
+    author: "Marcus Aurelius",
+    source: "Meditations",
+    school: "Stoicism",
+  },
+
+  // --- Seneca the Younger (Stoicism) ---
+  {
+    id: 21,
+    quote: "We suffer more often in imagination than in reality.",
+    author: "Lucius Annaeus Seneca",
+    source: "Letters from a Stoic",
+    school: "Stoicism",
+  },
+  {
+    id: 22,
+    quote: "Luck is what happens when preparation meets opportunity.",
+    author: "Lucius Annaeus Seneca",
+    source: "Epistles",
+    school: "Stoicism",
+  },
+  {
+    id: 23,
+    quote: "It is not that we have a short time to live, but that we waste a lot of it.",
+    author: "Lucius Annaeus Seneca",
+    source: "On the Shortness of Life",
+    school: "Stoicism",
+  },
+  {
+    id: 24,
+    quote: "If a man knows not to which port he sails, no wind is favorable.",
+    author: "Lucius Annaeus Seneca",
+    source: "Letters from a Stoic",
+    school: "Stoicism",
+  },
+  {
+    id: 25,
+    quote: "Difficulties strengthen the mind, as labor does the body.",
+    author: "Lucius Annaeus Seneca",
+    source: "Letters from a Stoic",
+    school: "Stoicism",
+  },
+  {
+    id: 26,
+    quote: "Begin at once to live, and count each separate day as a separate life.",
+    author: "Lucius Annaeus Seneca",
+    source: "Letters from a Stoic",
+    school: "Stoicism",
+  },
+  {
+    id: 27,
+    quote: "True happiness is to enjoy the present, without anxious dependence upon the future.",
+    author: "Lucius Annaeus Seneca",
+    source: "On the Happy Life",
+    school: "Stoicism",
+  },
+  {
+    id: 28,
+    quote: "He who fears death will never do anything worthy of a man who is alive.",
+    author: "Lucius Annaeus Seneca",
+    source: "Letters from a Stoic",
+    school: "Stoicism",
+  },
+  {
+    id: 29,
+    quote: "No person has the power to have everything they want, but it is in their power not to want what they don't have.",
+    author: "Lucius Annaeus Seneca",
+    source: "Moral Letters to Lucilius",
+    school: "Stoicism",
+  },
+  {
+    id: 30,
+    quote: "Sometimes even to live is an act of courage.",
+    author: "Lucius Annaeus Seneca",
+    source: "Letters from a Stoic",
+    school: "Stoicism",
+  },
+  {
+    id: 31,
+    quote: "A gem cannot be polished without friction, nor a man perfected without trials.",
+    author: "Lucius Annaeus Seneca",
+    source: "Moral Essays",
+    school: "Stoicism",
+  },
+  {
+    id: 32,
+    quote: "Life is like a play: it's not the length, but the excellence of the acting that matters.",
+    author: "Lucius Annaeus Seneca",
+    source: "Letters from a Stoic",
+    school: "Stoicism",
+  },
+  {
+    id: 33,
+    quote: "Associate with people who are likely to improve you.",
+    author: "Lucius Annaeus Seneca",
+    source: "Letters from a Stoic",
+    school: "Stoicism",
+  },
+  {
+    id: 34,
+    quote: "To bear trials with a calm mind robs misfortune of its strength and burden.",
+    author: "Lucius Annaeus Seneca",
+    source: "Hercules Oetaeus",
+    school: "Stoicism",
+  },
+  {
+    id: 35,
+    quote: "Only time can heal what reason cannot.",
+    author: "Lucius Annaeus Seneca",
+    source: "Agamemnon",
+    school: "Stoicism",
+  },
+  {
+    id: 36,
+    quote: "He suffers more than necessary, who suffers before it is necessary.",
+    author: "Lucius Annaeus Seneca",
+    source: "Letters from a Stoic",
+    school: "Stoicism",
+  },
+
+  // --- Epictetus (Stoicism) ---
+  {
+    id: 37,
+    quote: "Men are disturbed not by things, but by the view which they take of them.",
+    author: "Epictetus",
+    source: "Enchiridion",
+    school: "Stoicism",
+  },
+  {
+    id: 38,
+    quote: "We have two ears and one mouth so that we can listen twice as much as we speak.",
+    author: "Epictetus",
+    source: "Discourses",
+    school: "Stoicism",
+  },
+  {
+    id: 39,
+    quote: "Don't explain your philosophy. Embody it.",
+    author: "Epictetus",
+    source: "Enchiridion",
+    school: "Stoicism",
+  },
+  {
+    id: 40,
+    quote: "No man is free who is not master of himself.",
+    author: "Epictetus",
+    source: "Discourses",
+    school: "Stoicism",
+  },
+  {
+    id: 41,
+    quote: "Wealth consists not in having great possessions, but in having few wants.",
+    author: "Epictetus",
+    source: "Discourses",
+    school: "Stoicism",
+  },
+  {
+    id: 42,
+    quote: "It's not what happens to you, but how you react to it that matters.",
+    author: "Epictetus",
+    source: "Enchiridion",
+    school: "Stoicism",
+  },
+  {
+    id: 43,
+    quote: "First say to yourself what you would be; and then do what you have to do.",
+    author: "Epictetus",
+    source: "Discourses",
+    school: "Stoicism",
+  },
+  {
+    id: 44,
+    quote: "Any person capable of angering you becomes your master.",
+    author: "Epictetus",
+    source: "Discourses",
+    school: "Stoicism",
+  },
+  {
+    id: 45,
+    quote: "He is a wise man who does not grieve for the things which he has not, but rejoices for those which he has.",
+    author: "Epictetus",
+    source: "Fragments",
+    school: "Stoicism",
+  },
+  {
+    id: 46,
+    quote: "Small-minded people blame others. Average people blame themselves. The wise see all blame as foolishness.",
+    author: "Epictetus",
+    source: "Enchiridion",
+    school: "Stoicism",
+  },
+  {
+    id: 47,
+    quote: "Freedom is the only worthy goal in life. It is won by disregarding things that lie beyond our control.",
+    author: "Epictetus",
+    source: "Discourses",
+    school: "Stoicism",
+  },
+  {
+    id: 48,
+    quote: "Curb your desire—don't set your heart on so many things and you will get what you need.",
+    author: "Epictetus",
+    source: "Discourses",
+    school: "Stoicism",
+  },
+
+  // --- Zeno of Citium & Cleanthes (Early Stoics) ---
+  {
+    id: 49,
+    quote: "Man conquers the world by conquering himself.",
+    author: "Zeno of Citium",
+    source: "Fragments",
+    school: "Stoicism",
+  },
+  {
+    id: 50,
+    quote: "Well-being is realized by small steps, but is truly no small thing.",
+    author: "Zeno of Citium",
+    source: "Fragments",
+    school: "Stoicism",
+  },
+  {
+    id: 51,
+    quote: "Fate leads the willing, and drags along the reluctant.",
+    author: "Cleanthes",
+    source: "Hymn to Zeus",
+    school: "Stoicism",
+  },
+  {
+    id: 52,
+    quote: "Steel your sensibilities, so that life shall hurt you as little as possible.",
+    author: "Zeno of Citium",
+    source: "Fragments",
+    school: "Stoicism",
+  },
+
+  // --- Plato (Classical Philosophy) ---
+  {
+    id: 53,
+    quote: "The greatest victory is the conquest of oneself.",
+    author: "Plato",
+    source: "Laws",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 54,
+    quote: "Wise men speak because they have something to say; fools because they have to say something.",
+    author: "Plato",
+    source: "The Republic",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 55,
+    quote: "We can easily forgive a child who is afraid of the dark; the real tragedy of life is when men are afraid of the light.",
+    author: "Plato",
+    source: "The Republic",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 56,
+    quote: "Courage is knowing what not to fear.",
+    author: "Plato",
+    source: "Laches",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 57,
+    quote: "Be kind, for everyone you meet is fighting a harder battle.",
+    author: "Plato",
+    source: "Dialogues",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 58,
+    quote: "Ignorance, the root and stem of every evil.",
+    author: "Plato",
+    source: "The Republic",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 59,
+    quote: "Good actions give strength to ourselves and inspire good actions in others.",
+    author: "Plato",
+    source: "The Republic",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 60,
+    quote: "The measure of a man is what he does with power.",
+    author: "Plato",
+    source: "The Republic",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 61,
+    quote: "Knowledge which is acquired under compulsion obtains no hold on the mind.",
+    author: "Plato",
+    source: "The Republic",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 62,
+    quote: "Thinking: the talking of the soul with itself.",
+    author: "Plato",
+    source: "Theaetetus",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 63,
+    quote: "There are two things a person should never be angry at: what they can help, and what they cannot.",
+    author: "Plato",
+    source: "Phaedo",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 64,
+    quote: "Human behavior flows from three main sources: desire, emotion, and knowledge.",
+    author: "Plato",
+    source: "The Republic",
+    school: "Classical Philosophy",
+  },
+
+  // --- Socrates (Classical Philosophy) ---
+  {
+    id: 65,
+    quote: "An unexamined life is not worth living.",
+    author: "Socrates",
+    source: "Apology",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 66,
+    quote: "I know that I am intelligent, because I know that I know nothing.",
+    author: "Socrates",
+    source: "Dialogues of Plato",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 67,
+    quote: "The secret of change is to focus all of your energy not on fighting the old, but on building the new.",
+    author: "Socrates",
+    source: "Discourses",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 68,
+    quote: "He who is not contented with what he has, would not be contented with what he would like to have.",
+    author: "Socrates",
+    source: "Fragments",
+    school: "Classical Philosophy",
+  },
+
+  // --- Aristotle (Classical Philosophy) ---
+  {
+    id: 69,
+    quote: "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+    author: "Aristotle",
+    source: "Nicomachean Ethics",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 70,
+    quote: "Knowing yourself is the beginning of all wisdom.",
+    author: "Aristotle",
+    source: "Nicomachean Ethics",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 71,
+    quote: "It is the mark of an educated mind to be able to entertain a thought without accepting it.",
+    author: "Aristotle",
+    source: "Metaphysics",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 72,
+    quote: "Educating the mind without educating the heart is no education at all.",
+    author: "Aristotle",
+    source: "Politics",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 73,
+    quote: "Anybody can become angry—that is easy, but to be angry with the right person, to the right degree, at the right time, and for the right purpose—that is not easy.",
+    author: "Aristotle",
+    source: "Nicomachean Ethics",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 74,
+    quote: "He who has overcome his fears will truly be free.",
+    author: "Aristotle",
+    source: "Nicomachean Ethics",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 75,
+    quote: "Patience is bitter, but its fruit is sweet.",
+    author: "Aristotle",
+    source: "Rhetoric",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 76,
+    quote: "Quality is not an act, it is a habit.",
+    author: "Aristotle",
+    source: "Nicomachean Ethics",
+    school: "Classical Philosophy",
+  },
+
+  // --- Niccolò Machiavelli (Political Realism) ---
+  {
+    id: 77,
+    quote: "Everyone sees what you appear to be, few experience what you really are.",
+    author: "Niccolò Machiavelli",
+    source: "The Prince",
+    school: "Political Realism",
+  },
+  {
+    id: 78,
+    quote: "It is much safer to be feared than loved because love is preserved by the link of obligation which men break at every opportunity.",
+    author: "Niccolò Machiavelli",
+    source: "The Prince",
+    school: "Political Realism",
+  },
+  {
+    id: 79,
+    quote: "Never attempt to win by force what can be won by deception.",
+    author: "Niccolò Machiavelli",
+    source: "The Prince",
+    school: "Political Realism",
+  },
+  {
+    id: 80,
+    quote: "The lion cannot protect himself from traps, and the fox cannot defend himself from wolves. One must therefore be a fox to recognize traps, and a lion to frighten wolves.",
+    author: "Niccolò Machiavelli",
+    source: "The Prince",
+    school: "Political Realism",
+  },
+  {
+    id: 81,
+    quote: "There is nothing more difficult to take in hand, more perilous to conduct, or more uncertain in its success, than to take the lead in the introduction of a new order of things.",
+    author: "Niccolò Machiavelli",
+    source: "The Prince",
+    school: "Political Realism",
+  },
+  {
+    id: 82,
+    quote: "Whosoever desires constant success must change his conduct with the times.",
+    author: "Niccolò Machiavelli",
+    source: "Discourses on Livy",
+    school: "Political Realism",
+  },
+  {
+    id: 83,
+    quote: "He who wishes to be obeyed must know how to command.",
+    author: "Niccolò Machiavelli",
+    source: "Discourses on Livy",
+    school: "Political Realism",
+  },
+  {
+    id: 84,
+    quote: "Men rise from one ambition to another: first, they seek to secure themselves against attack, and then they attack others.",
+    author: "Niccolò Machiavelli",
+    source: "Discourses on Livy",
+    school: "Political Realism",
+  },
+  {
+    id: 85,
+    quote: "Fortune is a woman, and if you wish to keep her under it is necessary to beat and ill-use her.",
+    author: "Niccolò Machiavelli",
+    source: "The Prince",
+    school: "Political Realism",
+  },
+  {
+    id: 86,
+    quote: "A prudent prince neither can nor ought to keep his word when to keep it is hurtful to him and the causes which led him to pledge it are removed.",
+    author: "Niccolò Machiavelli",
+    source: "The Prince",
+    school: "Political Realism",
+  },
+
+  // --- Sun Tzu (Strategy & Realism) ---
+  {
+    id: 87,
+    quote: "In the midst of chaos, there is also opportunity.",
+    author: "Sun Tzu",
+    source: "The Art of War",
+    school: "Political Realism",
+  },
+  {
+    id: 88,
+    quote: "If you know the enemy and know yourself, you need not fear the result of a hundred battles.",
+    author: "Sun Tzu",
+    source: "The Art of War",
+    school: "Political Realism",
+  },
+  {
+    id: 89,
+    quote: "The supreme art of war is to subdue the enemy without fighting.",
+    author: "Sun Tzu",
+    source: "The Art of War",
+    school: "Political Realism",
+  },
+  {
+    id: 90,
+    quote: "Let your rapidity be that of the wind, your compactness that of the forest; in raiding and plundering be like fire, in immovability like a mountain.",
+    author: "Sun Tzu",
+    source: "The Art of War",
+    school: "Political Realism",
+  },
+
+  // --- Eastern & Ancient Thinkers (Lao Tzu, Confucius, Heraclitus) ---
+  {
+    id: 91,
+    quote: "He who conquers others is strong; he who conquers himself is mighty.",
+    author: "Lao Tzu",
+    source: "Tao Te Ching",
+    school: "Eastern Philosophy",
+  },
+  {
+    id: 92,
+    quote: "A journey of a thousand miles begins with a single step.",
+    author: "Lao Tzu",
+    source: "Tao Te Ching",
+    school: "Eastern Philosophy",
+  },
+  {
+    id: 93,
+    quote: "The man who moves a mountain begins by carrying away small stones.",
+    author: "Confucius",
+    source: "Analects",
+    school: "Eastern Philosophy",
+  },
+  {
+    id: 94,
+    quote: "No man ever steps in the same river twice, for it's not the same river and he's not the same man.",
+    author: "Heraclitus",
+    source: "Fragments",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 95,
+    quote: "Character is destiny.",
+    author: "Heraclitus",
+    source: "Fragments",
+    school: "Classical Philosophy",
+  },
+
+  // --- Existential & Modern Philosophical Giants (Nietzsche, Spinoza, Schopenhauer) ---
+  {
+    id: 96,
+    quote: "He who has a why to live can bear almost any how.",
+    author: "Friedrich Nietzsche",
+    source: "Twilight of the Idols",
+    school: "Existentialism",
+  },
+  {
+    id: 97,
+    quote: "To live is to suffer, to survive is to find some meaning in the suffering.",
+    author: "Friedrich Nietzsche",
+    source: "Thus Spoke Zarathustra",
+    school: "Existentialism",
+  },
+  {
+    id: 98,
+    quote: "That which does not kill us makes us stronger.",
+    author: "Friedrich Nietzsche",
+    source: "Twilight of the Idols",
+    school: "Existentialism",
+  },
+  {
+    id: 99,
+    quote: "Peace is not the absence of war, it is a virtue, a state of mind, a disposition for benevolence, confidence, justice.",
+    author: "Baruch Spinoza",
+    source: "Tractatus Politicus",
+    school: "Classical Philosophy",
+  },
+  {
+    id: 100,
+    quote: "Talent hits a target no one else can hit; Genius hits a target no one else can see.",
+    author: "Arthur Schopenhauer",
+    source: "The World as Will and Representation",
+    school: "Existentialism",
+  },
+];
+
+export const getRandomPhilosophicalQuote = (): PhilosophicalQuote => {
+  const index = Math.floor(Math.random() * philosophicalQuotes.length);
+  return philosophicalQuotes[index];
+};
+
+export const getQuotesBySchool = (school: string): PhilosophicalQuote[] => {
+  return philosophicalQuotes.filter(
+    (q) => q.school.toLowerCase() === school.toLowerCase()
+  );
+};
+
+export const getQuotesByAuthor = (author: string): PhilosophicalQuote[] => {
+  return philosophicalQuotes.filter((q) =>
+    q.author.toLowerCase().includes(author.toLowerCase())
+  );
+};
