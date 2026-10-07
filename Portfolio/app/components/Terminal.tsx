@@ -194,11 +194,16 @@ Featured Production Projects:
         case "experience":
         case "work":
           response = `
-Work History & Experience:
-• Increff — Software Development Engineer:
-  Enterprise omnichannel retail supply chain & fulfillment optimization microservices.
-• QuickCL — Full-Stack Developer:
-  Automated customs compliance platform and document entity extraction pipelines.
+Work Experience — QuickCL (Customs AI & Document Automation):
+Role: Full-Stack AI Software Engineer (2025 – Present)
+Platform: https://www.quickcl.mapsai.in | Repo: https://github.com/usp13/QuickCL
+
+Highlights & Contributions:
+• Document AI Pipeline: Engineered end-to-end OCR and layout-aware entity extraction parsing 140+ fields from Invoices, Packing Lists & Bills of Lading.
+• Turnaround Acceleration: Slashed processing cycle times from 30–60 minutes down to <30 seconds (98% reduction) with automated HS code classification.
+• Human-in-the-Loop Workspace: Built interactive dual-pane review workspace in Next.js with synchronized bounding-box overlays and confidence scoring indicators.
+• Reconciliation & Compliance: Developed automated cross-document validation comparing weights, packages, and values between Invoices and Packing Lists.
+• Export Engine: Standardized exports into multi-tab Excel workbooks, normalized JSON schemas, and ICEGATE/EDI customs filings.
           `;
           break;
 

@@ -61,14 +61,17 @@ const initialProjects: ProjectFiles = {
   ],
   "experience": [
     {
-      "role": "Software Engineer",
-      "company": "Increff",
-      "focus": "SaaS Supply Chain Optimization, Inventory Analytics, Distributed Systems"
-    },
-    {
-      "role": "Software Development Engineer Intern",
+      "role": "Full-Stack AI Software Engineer",
       "company": "QuickCL",
-      "focus": "Customs OCR Pipeline, Automated Document Extraction, 140+ Field Parsing"
+      "platform": "https://www.quickcl.mapsai.in",
+      "repo": "https://github.com/usp13/QuickCL",
+      "period": "2025 – Present",
+      "highlights": [
+        "140+ fields extracted across Invoices, Packing Lists & Bills of Lading",
+        "Turnaround reduced from 30–60 minutes down to <30 seconds (98% reduction)",
+        "Interactive dual-pane Next.js verification workspace with live bounding boxes",
+        "Automated cross-document reconciliation & standardized Excel/EDI exports"
+      ]
     }
   ],
   "status": "Available for high-impact software engineering & AI roles"
