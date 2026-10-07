@@ -38,7 +38,7 @@ const COMMAND_LIST: CommandItem[] = [
 const fileSystem: Record<string, string> = {
   "bio.txt": "Utsav Shailesh Panchal\nFull-Stack Developer & AI Systems Engineer based in India.\nSpecializing in high-performance web applications, LLM agent architectures, and RAG pipelines.",
   "skills.txt": "Core: TypeScript, C++, Python, Next.js, Node.js, React, TailwindCSS, MongoDB, PostgreSQL, Vector DBs, Docker, Linux.",
-  "projects.txt": "1. InterReview — AI Mock Interview & Evaluation Engine\n2. Build-Your-Own RAG — Vector embedding search & augmentation engine\n3. QuickCL Customs — Automated 140+ field customs logistics pipeline (https://www.quickcl.mapsai.in)\n4. DND Alert Engine — High-throughput asynchronous alert dispatching and notification router",
+  "projects.txt": "1. InterReview — AI Mock Interview & Evaluation Engine\n2. Build-Your-Own RAG — Vector embedding search & augmentation engine\n3. QuickCL Customs — Automated 140+ field customs logistics pipeline (https://quickcl.mapsai.in)\n4. DND Alert Engine — High-throughput asynchronous alert dispatching and notification router",
   "contact.txt": "Email: utsavpanchal1304@gmail.com\nGitHub: https://github.com/usp13\nLinkedIn: https://linkedin.com/in/utsav-panchal\nX: https://x.com/theutsavpanchal",
   "resume.pdf": "[Binary File] Resume of Utsav Shailesh Panchal. Use the 'resume' command or click the Resume icon on the Desktop.",
 };
@@ -186,7 +186,7 @@ Location: Ahmedabad / Bengaluru, India.`;
 Featured Production Projects:
 1. InterReview — AI Mock Interview & Evaluation Engine powered by LLMs and speech scoring.
 2. Build-Your-Own RAG — Vector embedding search & augmentation engine with cosine similarity.
-3. QuickCL Customs Intelligence — Automated customs logistics extraction pipeline processing 140+ fields (https://www.quickcl.mapsai.in).
+3. QuickCL Customs Intelligence — Automated customs logistics extraction pipeline processing 140+ fields (https://quickcl.mapsai.in).
 4. DND Alert Engine — High-throughput asynchronous alert dispatching and notification router in TypeScript.
           `;
           break;
@@ -196,7 +196,7 @@ Featured Production Projects:
           response = `
 Work Experience — QuickCL (Customs AI & Document Automation):
 Role: Full-Stack AI Software Engineer (2025 – Present)
-Platform: https://www.quickcl.mapsai.in | Repo: https://github.com/usp13/QuickCL
+Platform: https://quickcl.mapsai.in | Repo: https://github.com/usp13/QuickCL
 
 Highlights & Contributions:
 • Document AI Pipeline: Engineered end-to-end OCR and layout-aware entity extraction parsing 140+ fields from Invoices, Packing Lists & Bills of Lading.

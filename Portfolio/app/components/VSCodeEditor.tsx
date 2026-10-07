@@ -63,7 +63,7 @@ const initialProjects: ProjectFiles = {
     {
       "role": "Full-Stack AI Software Engineer",
       "company": "QuickCL",
-      "platform": "https://www.quickcl.mapsai.in",
+      "platform": "https://quickcl.mapsai.in",
       "repo": "https://github.com/usp13/QuickCL",
       "period": "2025 – Present",
       "highlights": [

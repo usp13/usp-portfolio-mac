@@ -37,7 +37,7 @@ const initialProjects: Project[] = [
     title: "QuickCL",
     tagline: "Customs Documentation Automation & OCR Platform",
     description: "Enterprise customs documentation automation platform that extracts and structures 140+ fields from commercial invoices, packing lists, and bills of lading. Employs OCR and AI document processing to cut manual data entry from 60 minutes to under 30 seconds with automatic HS code verification.",
-    deployedUrl: "https://www.quickcl.mapsai.in",
+    deployedUrl: "https://quickcl.mapsai.in",
     githubUrl: "https://github.com/usp13/QuickCL",
     // Paste image path here later (e.g. "/Projects/echonet.png")
     imageUrl: "",

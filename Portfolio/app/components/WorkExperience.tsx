@@ -136,7 +136,7 @@ const WorkExperience: React.FC = () => {
               2025 – Present
             </span>
             <a
-              href="https://www.quickcl.mapsai.in"
+              href="https://quickcl.mapsai.in"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 text-xs font-medium px-3.5 py-1.5 rounded-full bg-apple-blue hover:bg-apple-blue-focus text-white transition-all shadow-sm"
